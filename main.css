@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  background: #000;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.title {
+  color: #fff;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #77c5da;
+  margin-right: 15px;
+  border-radius: 10px 5px 10px 5px;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.text a {
+  text-decoration: none;
+  color: #77c5da;
+  transition: all .1s linear;
+}
+
+.text a:hover {
+  color: rgb(221, 64, 200);
+  transition: all .1s linear;
+}
+
+.logo {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo::before {
+  content: "";
+  width: 40%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #77c5da;
+  border-radius: 116px 31px 116px 31px;
+}
+
+.logo svg {
+  fill: #fff;
+  z-index: 2;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1440px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero__content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about {
+  margin-bottom: 100px;
+}
+
+.about .text {
+  text-align: left;
+}
+
+.hoeItWorks__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.hoeItWorks__content .text {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.howItWorks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.howItWorks svg {
+  fill: #fff;
+  width: 100px;
+}
+
+.howItWorks .text {
+  margin-bottom: 40px;
+}
+
+.howItWorks__schema {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.howItWorks__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.howItWorks__dev {
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  /* margin-bottom: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.howItWorks__dev::after {
+  content: "";
+  width: 3px;
+  height: 40px;
+  background: #77c5da;
+  margin-top: 15px;
+}
+
+.howItWorks__main {
+  margin-bottom: 30px;
+}
+
+.howItWorks__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 4;
+}
+
+.howItWorks__item::before {
+  content: "";
+  width: 3px;
+  height: 40px;
+  background: #77c5da;
+  margin-bottom: 15px;
+}
+
+.howItWorks__item img {
+  background-color: rgb(221, 64, 200);
+  padding: 5px;
+  border-radius: 10px 5px 10px 5px;
+}
+
+.howItWorks__item:last-child img {
+  padding: 0;
+}
+
+
+.howItWorks__item--first::before {
+  transform: rotate(45deg) translate(27px, -31px);
+}
+
+.howItWorks__item--first img {
+  background-color: rgb(81, 231, 224);
+}
+
+.howItWorks__item--third::before {
+  transform: rotate(-45deg) translate(-27px, -31px);
+}
+
+.howItWorks__item--third img {
+  background-color: rgb(53, 53, 53);
+}
+
+.footer {
+  background-color: rgb(53, 53, 53);
+  padding: 20px;
+}
+
+.footer .text {
+  text-align: left;
+  font-size: 12px;
+  line-height: 2;
+}
+
+@media(min-width: 500px) {
+
+  .container {
+    padding: 0 20%;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .hero .text {
+    text-align: left;
+    font-size: 26px;
+  }
+
+  .footer .text {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 1440px) {
+
+  .text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .hero {
+    height: 1000px;
+  }
+
+  .hero .text {
+    text-align: left;
+    font-size: 26px;
+  }
+}
